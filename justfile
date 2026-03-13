@@ -1,5 +1,6 @@
 install:
   pnpm install --frozen-lockfile
+  pnpm exec playwright install --with-deps chromium
 
 lint: install
   pnpm astro check
@@ -10,8 +11,11 @@ dev: install
 build: install
   pnpm build
 
-preview:
+preview: build
   pnpm preview
+
+test: install
+  pnpm exec playwright test
 
 claude:
   #!/usr/bin/env bash
