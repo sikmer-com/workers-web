@@ -6,3 +6,9 @@ Use `just <recipe>` for all project tasks. Run `just --list` to see available re
 
 # System dependencies: devbox
 All system tools are managed via devbox. Run `devbox shell` to enter the environment. Packages are declared in `devbox.json`.
+
+# Stack
+- Framework: Astro 6 with `@astrojs/cloudflare` adapter
+- Hosting: Cloudflare Pages
+- Package manager: pnpm (never use npm or yarn)
+- Node: 25.x (devbox)
